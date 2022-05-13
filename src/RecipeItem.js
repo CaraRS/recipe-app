@@ -3,16 +3,16 @@ import React from "react";
 function RecipeItem({ recipe, deleteRecipe }) {
 
     return (
-    <>
+    <React.Fragment>
         <tr>
             <td>
-                {recipe.name}
+                {(recipe.name)}
             </td>
             <td>
-                {recipe.cuisine}
+                {(recipe.cuisine)}
             </td>
             <td>
-                <img src={recipe.photo} alt={recipe.photo} />
+                <img src={(recipe.photo)} alt={recipe.photo} />
             </td>
             <td className="content_td">
                 <p>{(recipe.ingredients)}</p>
@@ -24,7 +24,7 @@ function RecipeItem({ recipe, deleteRecipe }) {
                 <button name="delete" onClick={deleteRecipe}>Delete</button>
             </td>
         </tr>       
-    </>
+    </React.Fragment>
     )
 }
 
